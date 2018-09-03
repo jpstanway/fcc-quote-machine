@@ -1,0 +1,5 @@
+
+@mixin position($height, $align) {
+    height: $height;
+    text-align: $align;
+}

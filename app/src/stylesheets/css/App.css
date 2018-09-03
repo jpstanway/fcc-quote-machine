@@ -2,3 +2,15 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif; }
+
+#quote-div {
+  height: 70vh;
+  text-align: center; }
+
+#author-div {
+  height: 15vh;
+  text-align: right; }
+
+#button-div {
+  height: 15vh;
+  text-align: center; }

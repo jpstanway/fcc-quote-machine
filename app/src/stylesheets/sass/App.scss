@@ -1,6 +1,21 @@
+@import 'partials/functions';
+@import 'partials/mixins';
+@import 'partials/variables';
+
 body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
   }
-  
+
+#quote-div {
+  @include position(70vh, center);
+}
+
+#author-div {
+  @include position(15vh, right);
+}
+
+#button-div {
+  @include position(15vh, center);
+}
