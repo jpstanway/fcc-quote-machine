@@ -26,8 +26,11 @@ class QuoteMachine extends React.Component {
       text: '',
       author: ''
     }
-
     this.getQuote = this.getQuote.bind(this);
+  }
+
+  componentDidMount() {
+    this.getQuote();
   }
 
   getQuote() {
