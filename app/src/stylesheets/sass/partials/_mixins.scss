@@ -3,3 +3,8 @@
     height: $height;
     text-align: $align;
 }
+
+@mixin text-styles {
+    position: relative;
+    font-size: 1.9em;
+}

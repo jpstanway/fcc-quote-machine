@@ -5,7 +5,7 @@ import QUOTES from './modules/quotes';
 const Quote = (props) => {
   return(
     <div id="quote-div">
-      <p id="text">{props.text}</p>
+      <p id="text">"{props.text}"</p>
     </div>
   );
 };
@@ -13,7 +13,7 @@ const Quote = (props) => {
 const Author = (props) => {
   return(
     <div id="author-div">
-      <p id="author">{props.name}</p>
+      <p id="author">-- {props.name}</p>
     </div>
   );
 };

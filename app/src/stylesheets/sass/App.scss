@@ -1,19 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash|Courgette|Fondamento:400,400i|Jim+Nightshade|Kavivanar|Lateef|Patrick+Hand|Quintessential');
 @import 'partials/functions';
 @import 'partials/mixins';
 @import 'partials/variables';
 
 body {
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+  background-color: $main-bg-color;
+
+  p {
     margin: 0;
-    padding: 10px;
-    font-family: sans-serif;
   }
+}
 
 #quote-div {
   @include position(70vh, center);
+
+  #text {
+    @include text-styles;
+    top: 50%;
+    font-family: $primary-font;
+  }
 }
 
 #author-div {
   @include position(15vh, right);
+
+  #author {
+    @include text-styles;
+    right: 15%;
+    font-family: $secondary-font;
+  }
 }
 
 #button-div {

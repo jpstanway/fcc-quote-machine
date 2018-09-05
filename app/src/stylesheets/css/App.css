@@ -1,15 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Berkshire+Swash|Courgette|Fondamento:400,400i|Jim+Nightshade|Kavivanar|Lateef|Patrick+Hand|Quintessential");
 body {
   margin: 0;
-  padding: 10px;
-  font-family: sans-serif; }
+  padding: 0;
+  color: #fff;
+  background-color: #0e0e0e; }
+  body p {
+    margin: 0; }
 
 #quote-div {
   height: 70vh;
   text-align: center; }
+  #quote-div #text {
+    position: relative;
+    font-size: 1.9em;
+    top: 50%;
+    font-family: "Quintessential", "Comic Sans", cursive; }
 
 #author-div {
   height: 15vh;
   text-align: right; }
+  #author-div #author {
+    position: relative;
+    font-size: 1.9em;
+    right: 15%;
+    font-family: "Lateef", "Comic Sans", cursive; }
 
 #button-div {
   height: 15vh;
