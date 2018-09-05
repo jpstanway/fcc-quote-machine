@@ -49,9 +49,9 @@ class QuoteMachine extends React.Component {
         <Quote text={this.state.text}/>
         <Author name={this.state.author}/>
         <div id="button-div">
-          <button id="new-quote" onClick={this.getQuote}>New Quote</button>
+          <button id="new-quote" className="btn-style" onClick={this.getQuote}>New Quote</button>
           <a href="twitter.com/intent/tweet" target="_blank">
-            <button id="tweet-quote">Tweet Quote</button>
+            <button id="tweet-quote" className="btn-style">Tweet Quote</button>
           </a>
         </div>
       </div>

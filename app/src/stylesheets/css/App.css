@@ -28,3 +28,19 @@ body {
 #button-div {
   height: 15vh;
   text-align: center; }
+
+.btn-style {
+  width: 200px;
+  padding: 20px 40px;
+  margin: 0px 5px 0 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  font-style: "Arial", sans-serif;
+  font-size: 1.2em;
+  background-color: #878787;
+  border-color: #656565; }
+  .btn-style:hover {
+    color: #e6e6e6;
+    background-color: #a1a1a1; }

@@ -37,3 +37,22 @@ body {
 #button-div {
   @include position(15vh, center);
 }
+
+.btn-style {
+  width: 200px;
+  padding: 20px 40px;
+  margin: 0px 5px 0 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  color: $text-color;
+  font-style: $btn-font;
+  font-size: 1.2em;
+  background-color: $btn-bg-color;
+  border-color: $btn-brdr-color;
+
+  &:hover {
+    color: darken($text-color, 10%);
+    background-color: lighten($btn-bg-color, 10%);
+  }
+}
