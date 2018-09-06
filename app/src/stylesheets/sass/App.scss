@@ -55,7 +55,7 @@ body {
 }
 
 #twitter-icon {
-  color: $icon-color;
+  color: darken($icon-color, 25%);
 }
 
 .btn-style {

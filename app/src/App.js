@@ -5,7 +5,7 @@ import QUOTES from './modules/quotes';
 const Quote = (props) => {
   return(
     <div id="quote-div">
-      <p id="text"><i class="fas fa-quote-left"></i> {props.text}</p>
+      <p id="text"><i className="fas fa-quote-left"></i> {props.text}</p>
     </div>
   );
 };
@@ -26,6 +26,7 @@ class QuoteMachine extends React.Component {
       text: '',
       author: ''
     }
+    this.getIndex = this.getIndex.bind(this);
     this.getQuote = this.getQuote.bind(this);
   }
 
@@ -33,14 +34,24 @@ class QuoteMachine extends React.Component {
     this.getQuote();
   }
 
-  getQuote() {
+  getIndex() {
     let len = this.state.quotes.length;
-    let index = Math.floor(Math.random() * (len - 0 + 1)) + 0;
-    let obj = this.state.quotes[index];
-    this.setState({
-      text: obj.quote,
-      author: obj.author
-    });
+    let index = Math.floor(Math.random() * (len - 0)) + 0;
+    console.log(index);
+    return index;
+  }
+
+  getQuote() {
+    let obj = this.state.quotes[this.getIndex()];
+    if (this.state.text === obj.quote) {
+      console.log('identical quote found');
+      return this.getQuote();
+    } else {
+      this.setState({
+        text: obj.quote,
+        author: obj.author
+      });
+    }
   }
 
   render() {
