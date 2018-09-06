@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import QUOTES from './modules/quotes';
 
-
+// QUOTE TEXT COMPONENT
 const Quote = (props) => {
   return(
     <div id="quote-div">
@@ -10,6 +10,7 @@ const Quote = (props) => {
   );
 };
 
+// AUTHOR NAME COMPONENT
 const Author = (props) => {
   return(
     <div id="author-div">
@@ -18,6 +19,7 @@ const Author = (props) => {
   );
 };
 
+// MAIN COMPONENT INCLUDING CONTROLS
 class QuoteMachine extends React.Component {
   constructor(props) {
     super(props);
@@ -30,21 +32,24 @@ class QuoteMachine extends React.Component {
     this.getQuote = this.getQuote.bind(this);
   }
 
+  // renders random quote on initial load
   componentDidMount() {
     this.getQuote();
   }
 
+  // generates random index
   getIndex() {
     let len = this.state.quotes.length;
     let index = Math.floor(Math.random() * (len - 0)) + 0;
-    console.log(index);
     return index;
   }
 
+  // retrieves random index from quotes array
   getQuote() {
     let obj = this.state.quotes[this.getIndex()];
+
+    // if same quote is returned then recall method
     if (this.state.text === obj.quote) {
-      console.log('identical quote found');
       return this.getQuote();
     } else {
       this.setState({
@@ -59,6 +64,8 @@ class QuoteMachine extends React.Component {
       <div id="quote-box">
         <Quote text={this.state.text}/>
         <Author name={this.state.author}/>
+
+        {/* app controls */}
         <div id="button-div">
           <button id="new-quote" className="btn-style" onClick={this.getQuote}>New Quote</button>
           <a href="twitter.com/intent/tweet" target="_blank">
@@ -67,7 +74,7 @@ class QuoteMachine extends React.Component {
             </button>
           </a>
         </div>
-      </div>
+      </div> {/* end quote box */}
     );
   }
 }
