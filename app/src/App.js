@@ -5,7 +5,7 @@ import QUOTES from './modules/quotes';
 const Quote = (props) => {
   return(
     <div id="quote-div">
-      <p id="text">"{props.text}"</p>
+      <p id="text"><i class="fas fa-quote-left"></i> {props.text}</p>
     </div>
   );
 };
@@ -51,7 +51,9 @@ class QuoteMachine extends React.Component {
         <div id="button-div">
           <button id="new-quote" className="btn-style" onClick={this.getQuote}>New Quote</button>
           <a href="twitter.com/intent/tweet" target="_blank">
-            <button id="tweet-quote" className="btn-style">Tweet Quote</button>
+            <button id="tweet-quote" className="btn-style">
+              <i id="twitter-icon" className="fab fa-twitter"></i> Tweet Quote
+            </button>
           </a>
         </div>
       </div>

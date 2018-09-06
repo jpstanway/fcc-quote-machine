@@ -29,18 +29,27 @@ body {
   height: 15vh;
   text-align: center; }
 
+#new-quote {
+  background-color: #eda5b4; }
+  #new-quote:hover {
+    background-color: #f6d0d7; }
+
+#tweet-quote {
+  background-color: #b4eda5; }
+  #tweet-quote:hover {
+    background-color: #d7f6d0; }
+
+#twitter-icon {
+  color: #DEA5ED; }
+
 .btn-style {
-  width: 200px;
+  width: 220px;
   padding: 20px 40px;
   margin: 0px 5px 0 5px;
   border-radius: 4px;
   cursor: pointer;
   outline: none;
-  color: #fff;
+  color: #0e0e0e;
   font-style: "Arial", sans-serif;
   font-size: 1.2em;
-  background-color: #878787;
   border-color: #656565; }
-  .btn-style:hover {
-    color: #e6e6e6;
-    background-color: #a1a1a1; }
