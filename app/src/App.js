@@ -4,7 +4,6 @@ import QUOTES from './modules/quotes';
 import Quote from './modules/quote';
 import Author from './modules/author';
 
-
 // MAIN COMPONENT INCLUDING CONTROLS
 class QuoteMachine extends Component {
   constructor(props) {
@@ -56,16 +55,16 @@ class QuoteMachine extends Component {
         <CSSTransition
           in={appear}
           appear={true}
-          timeout={300}
-          classNames="animate"
+          timeout={600}
+          classNames="animate-right"
         >
           <Quote text={this.state.text} id={this.state.id} />
         </CSSTransition>
         <CSSTransition
           in={appear}
           appear={true}
-          timeout={300}
-          classNames="animate"
+          timeout={800}
+          classNames="animate-left"
         >
           <Author name={this.state.author} id={this.state.id}/>
         </CSSTransition>

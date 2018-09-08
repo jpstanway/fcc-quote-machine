@@ -1,0 +1,57 @@
+@import 'mixins';
+
+// quote text animation classes
+.animate-right-appear {
+  @include animate(right, -100%, 0);
+}
+
+.animate-right-appear.animate-right-appear-active {
+  @include animate(right, 0, 1);
+  transition: all 600ms linear;
+}
+
+.animate-right-enter {
+  @include animate(right, -100%, 0);
+}
+
+.animate-right-enter.animate-right-enter-active {
+  @include animate(right, 0, 1);
+  transition: all 600ms linear 300ms;
+}
+
+.animate-right-exit {
+  @include animate(right, 0, 1);
+}
+
+.animate-right-exit.animate-right-exit-active {
+  @include animate(right, -100%, 0);
+  transition: all 300ms linear;
+}
+
+// author text animation classes
+.animate-left-appear {
+  @include animate(left, -100%, 0);
+}
+
+.animate-left-appear.animate-left-appear-active {
+  @include animate(left, -15%, 1);
+  transition: all 800ms linear;
+}
+
+.animate-left-enter {
+  @include animate(left, -100%, 0);
+}
+
+.animate-left-enter.animate-left-enter-active {
+  @include animate(left, -15%, 1);
+  transition: all 800ms linear 300ms;
+}
+
+.animate-left-exit {
+  @include animate(left, -15%, 1);
+}
+
+.animate-left-exit.animate-left-exit-active {
+  @include animate(left, -100%, 0);
+  transition: all 300ms linear;
+}

@@ -9,24 +9,7 @@
     font-size: 1.9em;
 }
 
-@mixin animation($dir, $dur, $pos: 0) {
-    animation-name: fade-in-#{$dir};
-    animation-duration: $dur;
-
-    @keyframes fade-in-#{$dir} {
-      0% {
-        #{$dir}: -100%;
-        opacity: 0;
-      }
-
-      50% {
-        #{$dir}: -50%;
-        opacity: 0.5;
-      }
-
-      100% {
-        #{$dir}: $pos;
-        opacity: 1;
-      }
-    }
+@mixin animate($dir, $pos, $op) {
+  #{$dir}: $pos;
+  opacity: $op;
 }

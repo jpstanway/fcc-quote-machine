@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Berkshire+Swash|Courgette|Fondamento:400,400i|Jim+Nightshade|Kavivanar|Lateef|Patrick+Hand|Quintessential');
-@import 'partials/functions';
+@import 'partials/animations';
 @import 'partials/mixins';
 @import 'partials/variables';
 
@@ -70,38 +70,5 @@ body {
   font-style: $btn-font;
   font-size: 1.2em;
   border-color: $btn-brdr-color;
-}
-
-.animate-appear {
-  opacity: 0;
-  z-index: 1;
-}
-
-.animate-appear.animate-appear-active {
-  opacity: 1;
-  transition: opacity 300ms linear;
-}
-
-.animate-enter {
-  opacity: 0;
-  z-index: 1;
-}
-
-.animate-enter.animate-enter-active {
-  opacity: 1;
-  transition: opacity 300ms linear 500ms;
-}
-
-.animate-exit {
-  opacity: 1;
-}
-
-.animate-exit.animate-exit-active {
-  opacity: 0;
-  transition: opacity 300ms linear;
-}
-
-.animate-exit-done {
-  opacity: 0;
 }
 

@@ -1,4 +1,58 @@
 @import url("https://fonts.googleapis.com/css?family=Berkshire+Swash|Courgette|Fondamento:400,400i|Jim+Nightshade|Kavivanar|Lateef|Patrick+Hand|Quintessential");
+.animate-right-appear {
+  right: -100%;
+  opacity: 0; }
+
+.animate-right-appear.animate-right-appear-active {
+  right: 0;
+  opacity: 1;
+  transition: all 600ms linear; }
+
+.animate-right-enter {
+  right: -100%;
+  opacity: 0; }
+
+.animate-right-enter.animate-right-enter-active {
+  right: 0;
+  opacity: 1;
+  transition: all 600ms linear 300ms; }
+
+.animate-right-exit {
+  right: 0;
+  opacity: 1; }
+
+.animate-right-exit.animate-right-exit-active {
+  right: -100%;
+  opacity: 0;
+  transition: all 300ms linear; }
+
+.animate-left-appear {
+  left: -100%;
+  opacity: 0; }
+
+.animate-left-appear.animate-left-appear-active {
+  left: -15%;
+  opacity: 1;
+  transition: all 800ms linear; }
+
+.animate-left-enter {
+  left: -100%;
+  opacity: 0; }
+
+.animate-left-enter.animate-left-enter-active {
+  left: -15%;
+  opacity: 1;
+  transition: all 800ms linear 300ms; }
+
+.animate-left-exit {
+  left: -15%;
+  opacity: 1; }
+
+.animate-left-exit.animate-left-exit-active {
+  left: -100%;
+  opacity: 0;
+  transition: all 300ms linear; }
+
 body {
   margin: 0;
   padding: 0;
@@ -54,29 +108,3 @@ body {
   font-style: "Arial", sans-serif;
   font-size: 1.2em;
   border-color: #656565; }
-
-.animate-appear {
-  opacity: 0;
-  z-index: 1; }
-
-.animate-appear.animate-appear-active {
-  opacity: 1;
-  transition: opacity 300ms linear; }
-
-.animate-enter {
-  opacity: 0;
-  z-index: 1; }
-
-.animate-enter.animate-enter-active {
-  opacity: 1;
-  transition: opacity 300ms linear 500ms; }
-
-.animate-exit {
-  opacity: 1; }
-
-.animate-exit.animate-exit-active {
-  opacity: 0;
-  transition: opacity 300ms linear; }
-
-.animate-exit-done {
-  opacity: 0; }

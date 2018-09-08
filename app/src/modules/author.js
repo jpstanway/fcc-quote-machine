@@ -7,8 +7,8 @@ const Author = (props) => {
       <TransitionGroup id="author-div">
         <CSSTransition
           key={props.id}
-          timeout={300}
-          classNames="animate"
+          timeout={800}
+          classNames="animate-left"
         >
           <p id="author">-- {props.name}</p>
         </CSSTransition>
