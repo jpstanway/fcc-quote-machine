@@ -9,7 +9,8 @@ body {
 
 #quote-div {
   height: 70vh;
-  text-align: center; }
+  text-align: center;
+  padding: 0 40px; }
   #quote-div #text {
     position: relative;
     font-size: 1.9em;
@@ -53,3 +54,29 @@ body {
   font-style: "Arial", sans-serif;
   font-size: 1.2em;
   border-color: #656565; }
+
+.animate-appear {
+  opacity: 0;
+  z-index: 1; }
+
+.animate-appear.animate-appear-active {
+  opacity: 1;
+  transition: opacity 300ms linear; }
+
+.animate-enter {
+  opacity: 0;
+  z-index: 1; }
+
+.animate-enter.animate-enter-active {
+  opacity: 1;
+  transition: opacity 300ms linear 500ms; }
+
+.animate-exit {
+  opacity: 1; }
+
+.animate-exit.animate-exit-active {
+  opacity: 0;
+  transition: opacity 300ms linear; }
+
+.animate-exit-done {
+  opacity: 0; }

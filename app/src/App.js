@@ -1,32 +1,20 @@
 import React, { Component } from 'react';
+import { CSSTransition } from 'react-transition-group';
 import QUOTES from './modules/quotes';
+import Quote from './modules/quote';
+import Author from './modules/author';
 
-// QUOTE TEXT COMPONENT
-const Quote = (props) => {
-  return(
-    <div id="quote-div">
-      <p id="text"><i className="fas fa-quote-left"></i> {props.text}</p>
-    </div>
-  );
-};
-
-// AUTHOR NAME COMPONENT
-const Author = (props) => {
-  return(
-    <div id="author-div">
-      <p id="author">-- {props.name}</p>
-    </div>
-  );
-};
 
 // MAIN COMPONENT INCLUDING CONTROLS
-class QuoteMachine extends React.Component {
+class QuoteMachine extends Component {
   constructor(props) {
     super(props);
     this.state = {
       quotes: QUOTES,
       text: '',
-      author: ''
+      author: '',
+      id: '',
+      appear: true
     }
     this.getIndex = this.getIndex.bind(this);
     this.getQuote = this.getQuote.bind(this);
@@ -54,17 +42,34 @@ class QuoteMachine extends React.Component {
     } else {
       this.setState({
         text: obj.quote,
-        author: obj.author
+        author: obj.author,
+        id: obj.id
       });
     }
   }
 
   render() {
+    const { appear } = this.state;
+
     return(
       <div id="quote-box">
-        <Quote text={this.state.text}/>
-        <Author name={this.state.author}/>
-
+        <CSSTransition
+          in={appear}
+          appear={true}
+          timeout={300}
+          classNames="animate"
+        >
+          <Quote text={this.state.text} id={this.state.id} />
+        </CSSTransition>
+        <CSSTransition
+          in={appear}
+          appear={true}
+          timeout={300}
+          classNames="animate"
+        >
+          <Author name={this.state.author} id={this.state.id}/>
+        </CSSTransition>
+        
         {/* app controls */}
         <div id="button-div">
           <button id="new-quote" className="btn-style" onClick={this.getQuote}>New Quote</button>
@@ -74,7 +79,7 @@ class QuoteMachine extends React.Component {
             </button>
           </a>
         </div>
-      </div> {/* end quote box */}
+      </div>
     );
   }
 }
