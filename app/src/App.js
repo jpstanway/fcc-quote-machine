@@ -48,7 +48,7 @@ class QuoteMachine extends Component {
   }
 
   render() {
-    const { appear } = this.state;
+    const { text, author, id, appear } = this.state;
 
     return(
       <div id="quote-box">
@@ -61,7 +61,7 @@ class QuoteMachine extends Component {
           timeout={1000}
           classNames="animate-right"
         >
-          <Quote text={this.state.text} id={this.state.id} />
+          <Quote text={text} id={id} />
         </CSSTransition>
         <CSSTransition
           in={appear}
@@ -69,13 +69,13 @@ class QuoteMachine extends Component {
           timeout={1000}
           classNames="animate-left"
         >
-          <Author name={this.state.author} id={this.state.id}/>
+          <Author name={author} id={id}/>
         </CSSTransition>
         
         {/* app controls */}
         <div id="button-div">
           <button id="new-quote" className="btn-style" onClick={this.getQuote}>New Quote</button>
-          <a id="tweet-quote" href="twitter.com/intent/tweet" target="_blank">
+          <a id="tweet-quote" href={"https://www.twitter.com/intent/tweet?text=" + text} target="_blank">
             <button className="btn-style">
               <i id="twitter-icon" className="fab fa-twitter"></i> Tweet Quote
             </button>
