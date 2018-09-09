@@ -55,7 +55,7 @@ class QuoteMachine extends Component {
         <CSSTransition
           in={appear}
           appear={true}
-          timeout={600}
+          timeout={1000}
           classNames="animate-right"
         >
           <Quote text={this.state.text} id={this.state.id} />
@@ -63,7 +63,7 @@ class QuoteMachine extends Component {
         <CSSTransition
           in={appear}
           appear={true}
-          timeout={800}
+          timeout={1000}
           classNames="animate-left"
         >
           <Author name={this.state.author} id={this.state.id}/>

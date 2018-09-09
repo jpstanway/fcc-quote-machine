@@ -2,11 +2,13 @@
 @mixin position($height, $align) {
     height: $height;
     text-align: $align;
+    overflow: hidden;
 }
 
 @mixin text-styles {
     position: relative;
     font-size: 1.9em;
+    margin: 0;
 }
 
 @mixin animate($dir, $pos, $op) {
