@@ -75,8 +75,8 @@ class QuoteMachine extends Component {
         {/* app controls */}
         <div id="button-div">
           <button id="new-quote" className="btn-style" onClick={this.getQuote}>New Quote</button>
-          <a href="twitter.com/intent/tweet" target="_blank">
-            <button id="tweet-quote" className="btn-style">
+          <a id="tweet-quote" href="twitter.com/intent/tweet" target="_blank">
+            <button className="btn-style">
               <i id="twitter-icon" className="fab fa-twitter"></i> Tweet Quote
             </button>
           </a>

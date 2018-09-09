@@ -86,10 +86,13 @@ body {
 }
 
 #tweet-quote {
-  background-color: $secondary-btn-color;
 
-  &:hover {
-    background-color: lighten($secondary-btn-color, 10%);
+  button {
+    background-color: $secondary-btn-color;
+
+    &:hover {
+      background-color: lighten($secondary-btn-color, 10%);
+    }
   }
 }
 
