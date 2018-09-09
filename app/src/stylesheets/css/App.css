@@ -59,17 +59,48 @@ body {
   color: #fff;
   background-color: #0e0e0e; }
 
+#title {
+  height: 10vh;
+  text-align: center; }
+  #title h1 {
+    color: #a5b4ed;
+    font-family: "Arial", sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    text-shadow: #2a4cd0 1px 0 10px; }
+
 #quote-div {
-  height: 70vh;
+  height: 60vh;
   text-align: center;
-  overflow: hidden;
-  padding: 0 40px; }
+  padding: 0 40px;
+  overflow: hidden; }
+  @media screen and (max-width: 1024px) {
+    #quote-div {
+      height: 55vh; } }
+  @media screen and (max-width: 415px) {
+    #quote-div {
+      height: 50vh; } }
+  @media screen and (max-width: 320px) {
+    #quote-div {
+      height: 45vh; } }
   #quote-div #text {
     position: relative;
     font-size: 1.9em;
     margin: 0;
     top: 50%;
     font-family: "Quintessential", "Comic Sans", cursive; }
+    @media screen and (max-width: 415px) {
+      #quote-div #text {
+        font-size: 1.5em; } }
+    @media screen and (max-width: 1024px) {
+      #quote-div #text {
+        top: 35%; } }
+    @media screen and (max-width: 415px) {
+      #quote-div #text {
+        top: 10%; } }
+    @media screen and (max-width: 320px) {
+      #quote-div #text {
+        font-size: 1.2em; } }
 
 #author-div {
   height: 15vh;
@@ -81,11 +112,16 @@ body {
     margin: 0;
     right: 15%;
     font-family: "Lateef", "Comic Sans", cursive; }
+    @media screen and (max-width: 415px) {
+      #author-div #author {
+        font-size: 1.5em; } }
+    @media screen and (max-width: 415px) {
+      #author-div #author {
+        right: 5%; } }
 
 #button-div {
   height: 15vh;
-  text-align: center;
-  overflow: hidden; }
+  text-align: center; }
 
 #new-quote {
   background-color: #eda5b4; }
@@ -108,6 +144,6 @@ body {
   cursor: pointer;
   outline: none;
   color: #0e0e0e;
-  font-style: "Arial", sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 1.2em;
   border-color: #656565; }

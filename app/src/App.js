@@ -52,6 +52,9 @@ class QuoteMachine extends Component {
 
     return(
       <div id="quote-box">
+        <div id="title">
+          <h1>Game Quotes</h1>
+        </div>
         <CSSTransition
           in={appear}
           appear={true}
